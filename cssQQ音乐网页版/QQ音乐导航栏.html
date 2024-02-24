@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qq音乐导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .leftfix {
+            float: left;
+        }
+        .rightfix {
+            float: right;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .container {
+            width: 1000px;
+            height: 141.8px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        img {
+            width: 90px;
+            height: 46px;
+        }
+        .b,.c,.d,.e,.f,.g,.h,.i {
+            width: 90px;
+            height: 46px;
+            line-height: 46px;
+            font-size: 20px;
+        }
+        .b,.c,.d,.e,.f:hover::before {
+            color: black;
+        }
+        .b,.c,.d,.e,.f:hover::after {
+            color: green;
+        }
+        .next {
+            margin-left: 150px;
+            margin-top: 1px;
+            text-align: center;
+            width: 1000px;
+            font-size: 15px;
+        }
+        .ok {
+            margin-right: 40px;
+        }
+        .big1 {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        .big2 {
+            font-size: 30px;
+            margin-top: 40px;
+        }
+        .sma1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="page-header clearfix">
+            <div class="a leftfix"><img src="./logo.png" alt=""></div>
+            <div class="b leftfix"><a style="text-decoration: none;" href="">音乐馆</a></div>
+            <div class="c leftfix"><a style="text-decoration: none;" href="">我的音乐</a></div>
+            <div class="d leftfix"><a style="text-decoration: none;" href="">客户端</a></div>
+            <div class="e leftfix"><a style="text-decoration: none;" href="">开放平台</a></div>
+            <div class="f leftfix"><a style="text-decoration: none;" href="">VIP</a></div>
+            <div class="g leftfix">
+                <button>
+                    <span>搜索</span>
+                </button>
+            </div>
+            <div class="h leftfix"><a style="text-decoration: none;" href="">登录</a></div>
+            <div class="i leftfix">
+                <select name="" id="">
+                    <option value="">开通VIP</option>
+                    <option value="">开通超级会员</option>
+                    <option value="">开通绿钻豪华版</option>
+                </select>
+            </div>
+            <div class="j leftfix">
+                <button>
+                    <span>充值</span>
+                </button>
+            </div>
+        </div> 
+        <hr>  
+        <div class="next clearfix">
+            <div class="ok small1 leftfix"><a style="text-decoration: none;" href="">首页</a></div>
+            <div class="ok small2 leftfix"><a style="text-decoration: none;" href="">歌手</a></div>
+            <div class="ok small3 leftfix"><a style="text-decoration: none;" href="">新碟</a></div>
+            <div class="ok small4 leftfix"><a style="text-decoration: none;" href="">排行榜</a></div>
+            <div class="ok small5 leftfix"><a style="text-decoration: none;" href="">分类歌单</a></div>
+            <div class="ok small6 leftfix"><a style="text-decoration: none;" href="">电台</a></div>
+            <div class="ok small7 leftfix"><a style="text-decoration: none;" href="">MV</a></div>
+            <div class="ok small8 leftfix"><a style="text-decoration: none;" href="">数字专辑</a></div>
+        </div>
+        <!-- 歌单推荐 -->
+        <div class="big1">歌单推荐</div>
+        <div class="next clearfix sma1">
+            <div class="ok leftfix">为你推荐</div>
+            <div class="ok leftfix">经典国语</div>
+            <div class="ok leftfix">网络歌曲</div>
+            <div class="ok leftfix">伤感</div>
+            <div class="ok leftfix">官方歌单</div>
+            <div class="ok leftfix">情歌</div>
+        </div>
+        <!-- 新歌首发 -->
+        <div class="big2">新歌首发</div>
+        <div class="next clearfix sma1">
+            <div class="ok leftfix">最新</div>
+            <div class="ok leftfix">内地</div>
+            <div class="ok leftfix">港台</div>
+            <div class="ok leftfix">欧美</div>
+            <div class="ok leftfix">韩国</div>
+            <div class="ok leftfix">日本</div>
+        </div>
+    </div>
+
+</body>
+</html>

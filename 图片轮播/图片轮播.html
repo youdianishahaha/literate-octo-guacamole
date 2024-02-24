@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer{
+            width: 1220px;
+            height: 304.48px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #imglist{
+            list-style: none;
+            /* width: 3600px; */
+            position: absolute;
+            left: 0px;
+        }
+        #imglist li{
+            float: left;
+            margin: 0 10px;
+        }
+        #navDiv{
+            position: absolute;
+            bottom: 1px;
+            left: 595px;
+        }
+        #navDiv a{
+            float: left;
+            margin: 0 5px;
+            width: 8px;
+            height: 8px;
+            background-color: #292626;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+
+        }
+        #navDiv a:hover{
+            background-color: black;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            var imglist = document.getElementById("imglist");
+            var imgArr = document.getElementsByTagName("img");
+            imglist.style.width = 320*imgArr.length+"px";
+            var navDiv = document.getElementById("navDiv");
+             var outer = document.getElementById("outer");
+             navDiv.style.left = (outer.offsetWidth - navDiv.offsetWidth)/2 + "px";
+             var index = 0;
+             var allA = document.getElementsByTagName("a");
+             allA[index].style.backgroundColor = "black";
+             var index = 0
+             var allA = document.getElementsByTagName("a");
+            allA[index].style.backgroundColor = "black";
+            for(var i=0; i<allA.length ; i++){
+                allA[i].num = i;
+                allA[i].onclick = function(){
+                    index = this.num;
+                    imglist.style.left = -1220*index + "px";
+                    
+                }
+            }
+        }
+            
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <ul id="imglist">
+            <li><img src="./300 (1).webp"><img src="./300 (2).webp"><img src="./300 (5).webp"><img src="./300 (8).webp"></li>
+            <li><img src="./300 (10).webp"><img src="./300 (3).webp"><img src="./300 (6).webp"><img src="./300 (9).webp"></li>
+            <li><img src="./300 (11).webp"><img src="./300 (4).webp"><img src="./300 (7).webp"><img src="./300.webp"></li>
+        </ul>
+        <div id="navDiv">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+         </div>
+    </div>
+</body>
+</html>
